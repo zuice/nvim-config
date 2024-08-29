@@ -1,4 +1,5 @@
 -- Random vim editor stuff
+vim.opt.termguicolors = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
@@ -13,12 +14,11 @@ vim.opt.expandtab = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -42,11 +42,4 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "py",
 	command = "setlocal shiftwidth=4 tabstop=4",
-})
-
--- Format on save
-vim.api.nvim_create_augroup("__formatter__", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePost", {
-	group = "__formatter__",
-	command = ":FormatWrite",
 })

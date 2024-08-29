@@ -58,6 +58,33 @@ require("formatter").setup({
 				}
 			end,
 		},
+		typescriptreact = { -- Change 'tsx' to 'typescriptreact'
+			function()
+				return {
+					exe = "biome",
+					args = {
+						"format",
+						"--stdin-file-path",
+						util.escape_path(util.get_current_buffer_file_path()),
+					},
+					stdin = true,
+				}
+			end,
+		},
+		astro = { -- Add support for Astro files
+			function()
+				return {
+					exe = "prettier",
+					args = {
+						"--stdin-filepath",
+						util.escape_path(util.get_current_buffer_file_path()),
+						"--parser",
+						"astro",
+					},
+					stdin = true,
+				}
+			end,
+		},
 		python = {
 			function()
 				return {
@@ -76,4 +103,11 @@ require("formatter").setup({
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
 	},
+})
+
+-- Format on save
+vim.api.nvim_create_augroup("__formatter__", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+	group = "__formatter__",
+	command = ":FormatWrite",
 })

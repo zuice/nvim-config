@@ -8,7 +8,6 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
-		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use("folke/tokyonight.nvim")
@@ -21,7 +20,7 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("mhartington/formatter.nvim")
-	use("preservim/nerdtree")
+	use("nvim-tree/nvim-tree.lua")
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
