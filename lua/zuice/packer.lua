@@ -28,6 +28,12 @@ return require("packer").startup(function(use)
 			require("Comment").setup()
 		end,
 	})
+	use({
+		"supermaven-inc/supermaven-nvim",
+		config = function()
+			require("supermaven-nvim").setup({})
+		end,
+	})
 
 	-- LSP stuff
 	use({
