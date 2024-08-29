@@ -19,8 +19,8 @@ vim.api.nvim_set_keymap("n", "<A-BS>", "db", { noremap = true })
 vim.api.nvim_set_keymap("n", "<D-BS>", "d0", { noremap = true })
 
 -- VSCode-like commenting
-vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
-vim.api.nvim_set_keymap("v", "<C-_>", "gc", { noremap = false })
+vim.api.nvim_set_keymap("n", "<D-/>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("v", "<D-/>", "gc", { noremap = false })
 
 -- Indent/dedent mappings
 vim.keymap.set("v", "<D-[>", "<gv")
