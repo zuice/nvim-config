@@ -21,3 +21,10 @@ vim.api.nvim_set_keymap("n", "<D-BS>", "d0", { noremap = true })
 -- VSCode-like commenting
 vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<C-_>", "gc", { noremap = false })
+
+-- Indent/dedent mappings
+vim.keymap.set("v", "<D-[>", "<gv")
+vim.keymap.set("v", "<D-]>", ">gv")
+
+-- Error expanding
+vim.keymap.set("n", "<C-.>", vim.diagnostic.open_float)
