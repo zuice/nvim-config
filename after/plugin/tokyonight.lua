@@ -1,4 +1,9 @@
 require("tokyonight").setup({
+	transparent = true,
+	styles = {
+		sidebars = "transparent",
+		floats = "transparent",
+	},
 	on_highlights = function(hl, c)
 		local prompt = "#2d3149"
 		hl.TelescopeNormal = {
@@ -30,6 +35,3 @@ require("tokyonight").setup({
 		}
 	end,
 })
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_transparent = false
-vim.g.tokyonight_transparent_sidebar = false
