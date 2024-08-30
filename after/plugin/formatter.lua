@@ -74,12 +74,11 @@ require("formatter").setup({
 		astro = { -- Add support for Astro files
 			function()
 				return {
-					exe = "prettier",
+					exe = "biome",
 					args = {
-						"--stdin-filepath",
+						"format",
+						"--stdin-file-path",
 						util.escape_path(util.get_current_buffer_file_path()),
-						"--parser",
-						"astro",
 					},
 					stdin = true,
 				}
