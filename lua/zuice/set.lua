@@ -4,8 +4,27 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", ctermbg = "NONE" })
+vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
+
 vim.opt.smartindent = true
 vim.opt.wrap = false
+
+vim.opt.list = true
+vim.opt.listchars = {
+	space = "·",
+	tab = "→ ",
+	eol = "↵",
+	trail = "•",
+	extends = "❯",
+	precedes = "❮",
+}
+-- Change the color of listchars
+vim.cmd([[highlight SpecialKey ctermfg=DarkGray guifg=#5c6370]])
+-- Show trailing whitespace as red
+vim.cmd([[highlight ExtraWhitespace ctermbg=red guibg=red]])
+vim.cmd([[match ExtraWhitespace /\s\+$/]])
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2

@@ -1,6 +1,6 @@
-require("zuice/remap")
-require("zuice/colors")
-require("zuice/packer")
 require("zuice/set")
+require("zuice/remap")
+require("zuice/packer")
+require("zuice/colors")
 
 Colors()
