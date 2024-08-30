@@ -25,6 +25,9 @@ vim.api.nvim_set_keymap("v", "<D-/>", "gc", { noremap = false })
 -- Indent/dedent mappings
 vim.keymap.set("v", "<D-[>", "<gv")
 vim.keymap.set("v", "<D-]>", ">gv")
+-- Indent/dedent mappings for normal mode
+vim.keymap.set("n", "<D-[>", "<<", { noremap = true, silent = true })
+vim.keymap.set("n", "<D-]>", ">>", { noremap = true, silent = true })
 
 -- Error expanding
 vim.keymap.set("n", "<C-.>", vim.diagnostic.open_float)
