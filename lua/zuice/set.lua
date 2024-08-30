@@ -11,7 +11,7 @@ vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = {
 	space = "·",
 	tab = "→ ",
