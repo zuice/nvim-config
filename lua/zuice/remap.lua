@@ -30,4 +30,4 @@ vim.keymap.set("n", "<D-[>", "<<", { noremap = true, silent = true })
 vim.keymap.set("n", "<D-]>", ">>", { noremap = true, silent = true })
 
 -- Error expanding
-vim.keymap.set("n", "<C-.>", vim.diagnostic.open_float)
+vim.keymap.set("n", "<D-.>", vim.diagnostic.open_float)
